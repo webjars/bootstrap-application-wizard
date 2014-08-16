@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-application-wizard</artifactId>
-    <version>3768da3143-SNAPSHOT</version>
+    <version>3768da3142-1-SNAPSHOT</version>
     <name>Bootstrap Application Wizard</name>
     <description>WebJar for Bootstrap Application Wizard</description>
     <url>http://webjars.org</url>
@@ -60,9 +60,15 @@
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     
         <requirejs>
-        {
-        "paths": { "bootstrap-application-wizard": "bootstrap-wizard", "bootstrap-application-wizard-min": "bootstrap-wizard.min" },
-        "shim": { "bootstrap-application-wizard": [ "bootstrap" ], "bootstrap-application-wizard-min": [ "bootstrap" ] }
+            {
+                "paths": {
+                    "bootstrap-application-wizard": "bootstrap-wizard",
+                    "bootstrap-application-wizard-min": "bootstrap-wizard.min"
+                },
+                "shim": {
+                    "bootstrap-application-wizard": [ "bootstrap" ],
+                    "bootstrap-application-wizard-min": [ "bootstrap" ]
+                }
         }
         </requirejs>
     </properties>
