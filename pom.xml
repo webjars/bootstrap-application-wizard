@@ -58,6 +58,13 @@
         <upstream.commit>3768da3142f43428c5f63284407a2481a9e283d3</upstream.commit>
         <upstream.url>https://raw.githubusercontent.com/amoffat/bootstrap-application-wizard/${upstream.commit}/src</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+    
+        <requirejs>
+        {
+        "paths": { "bootstrap-application-wizard": "bootstrap-wizard", "bootstrap-application-wizard-min": "bootstrap-wizard.min" },
+        "shim": { "bootstrap-application-wizard": [ "bootstrap" ], "bootstrap-application-wizard-min": [ "bootstrap" ] }
+        }
+        </requirejs>
     </properties>
     
     <build>
